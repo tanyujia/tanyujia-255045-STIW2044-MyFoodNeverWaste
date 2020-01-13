@@ -148,7 +148,7 @@ class ResetPassWidgetState extends State<ResetPassWidget> {
       setState(() {
         _validate = true;
       });
-      Toast.show("Check your email format and must enter your email", context,
+      Toast.show("Please check your email format and must enter your email", context,
           duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
     }
   }

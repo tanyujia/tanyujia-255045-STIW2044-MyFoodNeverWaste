@@ -93,7 +93,7 @@ class _DetailInterfaceState extends State<DetailInterface> {
               fit: BoxFit.fill),
         ),
         SizedBox(
-          height: 10,
+          height: 9,
         ),
         Text(widget.food.foodtitle.toUpperCase(),
             style: TextStyle(
@@ -117,11 +117,13 @@ class _DetailInterfaceState extends State<DetailInterface> {
                       style: TextStyle(fontWeight: FontWeight.bold)),
                   Text(widget.food.fooddes),
                 ]),
+                TableRow(children: [Text(""), Text("")]),
                 TableRow(children: [
                   Text("Food Price",
                       style: TextStyle(fontWeight: FontWeight.bold)),
                   Text("RM " + widget.food.foodprice),
                 ]),
+                TableRow(children: [Text(""), Text("")]),
                 TableRow(children: [
                   Text("Food Location",
                       style: TextStyle(fontWeight: FontWeight.bold)),

@@ -12,7 +12,8 @@ import 'package:toast/toast.dart';
 
 File _image;
 String pathAsset = 'assets/images/take photo.png';
-String urlUpload = "http://mobilehost2019.com/MyFoodNeverWaste/php/dbregister.php";
+String urlUpload =
+    "http://mobilehost2019.com/MyFoodNeverWaste/php/dbregister.php";
 final TextEditingController _nameController = TextEditingController();
 final TextEditingController _phoneNoController = TextEditingController();
 final TextEditingController _emailController = TextEditingController();
@@ -56,7 +57,7 @@ class _RegisterUserState extends State<RegisterScreen> {
     );
   }
 
-   Future<bool> _onBackPressAppBar() async {
+  Future<bool> _onBackPressAppBar() async {
     Navigator.pop(
         context,
         MaterialPageRoute(
@@ -196,9 +197,12 @@ class RegisterWidgetState extends State<RegisterWidget> {
     } else if (_pass == "") {
       Toast.show("Failed. Please enter password.", context,
           duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
-    } else if (_pass.length<6) {
-      Toast.show("Failed. Please must sure your password is more than 6 characters.", context,
-          duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
+    } else if (_pass.length < 6) {
+      Toast.show(
+          "Failed. Please must sure your password is more than 6 characters.",
+          context,
+          duration: Toast.LENGTH_LONG,
+          gravity: Toast.BOTTOM);
     } else if ((_isEmailValid(_email)) &&
         (_name.length > 1) &&
         (_pass.length > 6) &&

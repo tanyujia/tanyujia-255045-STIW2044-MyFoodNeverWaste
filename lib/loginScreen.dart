@@ -154,7 +154,22 @@ class _LoginScreenState extends State<LoginScreen> {
   void _login() {
     _email = _emailController.text;
     _password = _passController.text;
-    if (_isEmailValid(_email) && (_password.length > 6)) {
+    if (_email == "") {
+      Toast.show("Failed. Please enter Email Address.", context,
+          duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
+    } else if (!_isEmailValid(_email)) {
+      Toast.show("Failed. Please make sure your email is valid.", context,
+          duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
+    } else if (_password == "") {
+      Toast.show("Failed. Please enter password.", context,
+          duration: Toast.LENGTH_LONG, gravity: Toast.BOTTOM);
+    } else if (_password.length < 6) {
+      Toast.show(
+          "Failed. Please must sure your password is more than 6 characters.",
+          context,
+          duration: Toast.LENGTH_LONG,
+          gravity: Toast.BOTTOM);
+    } else if (_isEmailValid(_email) && (_password.length > 6)) {
       ProgressDialog pr = new ProgressDialog(context,
           type: ProgressDialogType.Normal, isDismissible: false);
       pr.style(message: "Log in");

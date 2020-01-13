@@ -24,7 +24,7 @@ function sendEmail($useremail,$pass) {
     $to      = $useremail; 
     $subject = 'Verification for Reset Password'; 
     $message = 'Your new password is: '.$pass. "\nPlease use the temporary password to change your own password."; 
-    $headers = 'From: noreply@myexpress_driver.com.my' . "\r\n" . 
+    $headers = 'From: noreply@myFoodNeverWaste.com.my' . "\r\n" . 
     'Reply-To: '.$useremail . "\r\n" . 
     'X-Mailer: PHP/' . phpversion(); 
     mail($to, $subject, $message, $headers); 
